@@ -1,6 +1,6 @@
 # Splitting in Two
 
-We wish two split tuples in two equal sizes.
+We wish to split tuples in two equal sizes.
 If the tuple contains an odd number of elements, the left half should contain one more element.
 
 ### `TASK`
