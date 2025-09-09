@@ -40,7 +40,6 @@ Due to this ubiquity, many other programming languages made the `self` parameter
 
 We add another method to `Box`.
 
-:::code{caption="Python"}
 
 ```python
 class Box:
