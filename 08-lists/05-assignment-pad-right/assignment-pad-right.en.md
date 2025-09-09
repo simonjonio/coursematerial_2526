@@ -9,7 +9,7 @@ Write the function `pad_right(xs, length, padding)` that takes as parameters
 - a padding value `padding`.
 
 `pad_right(xs, length, padding)` adds `padding` values to the end of the list such that `xs` ends up with `length` items.
-If `xs` already contains `length` items (or more), nothing needs to be done.
+If `xs` already contains `length` items (or more), nothing needs to be done. The list `xs` should be edited in place. 
 
 #### USAGE
 
