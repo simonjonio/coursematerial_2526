@@ -70,7 +70,6 @@ Every time the condition is checked, `i` equals `0`.
 
 Even though `i` gets set to `1` inside the loop's body, it doesn't matter: the condition is only checked after a *full* iteration.
 Intermediate values for `i` have no bearing on the loop.
-::::
 
 ## `return`
 
