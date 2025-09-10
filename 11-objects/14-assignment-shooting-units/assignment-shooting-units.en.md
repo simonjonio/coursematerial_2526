@@ -24,9 +24,9 @@ Create a class `Unit`.
 - It has three private fields: `health`, `firepower` and `armor`.
 - The constructor allows to initialize all three.
   It checks that all three are positive (`>= 0`), otherwise it throws a `ValueError`.
-- Readonly properties `health`, `firepower` and `armor` give public access to the unit's information.
+- The private fields are read-only and can only be accessed by a getter `health`, `firepower` and `armor`.
 - A method `shot_by(other)` computes what happens if `self` is being shot by some other unit `other`.
-  This method decreases `self.health` by the correct amount.
+  This method decreases `health` by the correct amount.
   The `health` cannot go below `0`.
 
 As a reminder: exceptions are thrown using

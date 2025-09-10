@@ -40,7 +40,6 @@ Due to this ubiquity, many other programming languages made the `self` parameter
 
 We add another method to `Box`.
 
-
 ```python
 class Box:
     def __init__(self, contents):

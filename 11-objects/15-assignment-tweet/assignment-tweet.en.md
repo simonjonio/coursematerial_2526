@@ -13,9 +13,9 @@ Create a class `Tweet`:
 
 * It has two private fields: message and max_length.
 * Its constructor takes two parameters allowing you to initialize these fields.
-* It has a public property `message` (get &amp; set) which gives you access to the tweet's message.
+* The field `message` has a getter and a setter which gives you access to the tweet's message.
   The setter must guard against oversized tweets: if the new value exceeds the maximum length, it gets truncated.
-* It also has a public property `max_length` (get &amp; set).
+* It also has getters and setters for `max_length`.
   * If `max_length` is set to a new value, it has to make sure that the current message doesn't exceed it.
     If it does, the message gets truncated.
   * `max_length` must at least be `1`.
@@ -27,25 +27,25 @@ To make a method private, simply have their name start with two underscores.
 
 ```python
 >>> tweet = Tweet("1234567", 10)
->>> tweet.message
+>>> tweet.get_message()
 "1234567"
 
 # Max length exceeded, message gets truncated
 >>> tweet = Tweet("1234567", 5)
->>> tweet.message
+>>> tweet.get_message()
 "12345"
 
->>> tweet.max_length = 20
->>> tweet.message
+>>> tweet.set_max_length(20)
+>>> tweet.get_message()
 "12345"
 
 # Setting max length will automatically truncate message if it is too long
->>> tweet.max_length = 3
->>> tweet.message
+>>> tweet.set_max_length(3)
+>>> tweet.get_message()
 "123"
 
 # Setting invalid length raises ValueError
->>> tweet.max_length = 0
+>>> tweet.set_max_length(0)
 ValueError
 ```
 

@@ -13,8 +13,8 @@ import student
 def test_valid_initialization(message, max_length):
     tweet = student.Tweet(message, max_length)
 
-    assert tweet.message == message[:max_length]
-    assert tweet.max_length == max_length
+    assert tweet.get_message() == message[:max_length]
+    assert tweet.get_max_length() == max_length
 
 
 @pytest.mark.timeout(1)
@@ -40,10 +40,10 @@ def test_set_message(message, max_length):
     tweet = student.Tweet('', max_length)
 
     # Act
-    tweet.message = message
+    tweet.set_message(message)
 
     # Assert
-    assert tweet.message == message[:max_length]
+    assert tweet.get_message() == message[:max_length]
 
 
 @pytest.mark.timeout(1)
@@ -63,11 +63,11 @@ def test_set_max_length(message, max_length):
     tweet = student.Tweet(message, 100)
 
     # Act
-    tweet.max_length = max_length
+    tweet.set_max_length(max_length)
 
     # Assert
-    assert tweet.max_length == max_length
-    assert tweet.message == message[:max_length]
+    assert tweet.get_max_length() == max_length
+    assert tweet.get_message() == message[:max_length]
 
 
 @pytest.mark.timeout(1)
@@ -76,4 +76,4 @@ def test_set_invalid_max_length(max_length):
     tweet = student.Tweet("abc", 10)
 
     with pytest.raises(ValueError):
-        tweet.max_length = max_length
+        tweet.set_max_length(max_length)
