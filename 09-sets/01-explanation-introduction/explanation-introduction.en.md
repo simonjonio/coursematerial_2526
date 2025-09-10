@@ -2,10 +2,7 @@
 
 ## Benchmarking List Operations
 
-Let's have fun with a little benchmarking.
-The file `benchmark-lists.py` measures the time of several list-related operations.
-You can run it on your own machine if you'd like.
-These are the results when we run it:
+Just to check how fast our computers were, we ran a little benchmarking on our machines. These are the results when we ran the tests:
 
 | Operation | Time |
 | ------- | ------- |

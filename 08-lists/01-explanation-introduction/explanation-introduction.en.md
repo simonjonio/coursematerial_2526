@@ -9,13 +9,11 @@ This immutability can be a strength, but in other cases it can be quite an imped
 
 A list literal has the following syntax:
 
-:::code{caption="Python Shell"}
 
 ```python
 >>> lst = [1, 2, 3, 4]
 ```
 
-:::
 
 As you can see, the only difference lies in the brackets: square brackets for lists, round brackets for tuples.
 The list with one item also requires no trickery: `[1]` works just fine.

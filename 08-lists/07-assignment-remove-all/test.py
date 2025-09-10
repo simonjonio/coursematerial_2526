@@ -22,5 +22,5 @@ import student
 def test_remove_all(xs, item_to_remove, expected):
     return_value = student.remove_all(xs, item_to_remove)
 
-    assert return_value is None, 'remove should return None'
+    assert return_value is None, 'remove_all should return None'
     assert expected == xs

@@ -20,10 +20,10 @@ for y in range(height):
 Having the ability to do so does not necessarily mean it's a good idea:
 
 * Nesting loops can lead to very inefficient code.
-* As you may have experienced yourself, lots of nesting makes the code makes the code very difficult to understand.
+* As you may have experienced yourself, lots of nesting makes the code very difficult to understand.
 
 Sometimes, performing such complex logic is unavoidable.
-It is strongly recommended to split the code into separate functions with descriptive names which then serve as guide in understanding what is actually going on.
+It is strongly recommended to split the code into separate functions with descriptive names which then serve as a guide in understanding what is actually going on.
 
 ### `EXAMPLE`
 

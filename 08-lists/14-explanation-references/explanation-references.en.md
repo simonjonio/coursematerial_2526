@@ -21,7 +21,6 @@ The distinction between working with stateful objects and stateless objects is a
 * *Functional programming* allows only stateless objects.
 
 Recently, the world has moved towards functional programming, as it simplifies things a lot.
-:::
 
 ## Example: Lists
 

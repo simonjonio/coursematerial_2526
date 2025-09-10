@@ -2,7 +2,7 @@
 
 ### `TASK`
 
-Write a function `double_items(ns)` that given a list of integers `ns` updates the list so that every element is doubled.
+Write a function `double_items(ns)` that given a list of integers `ns` updates the list so that every element is doubled. The list `ns` should be edited in place, meaning that there should be no return value. 
 
 #### USAGE
 
