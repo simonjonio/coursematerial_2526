@@ -5,7 +5,7 @@ An architect needs to place several heating devices in a large building. In orde
 * the current temperature setting,
 * the minimum allowed temperature and
 * the maximum allowed temperature.
-* Within the simulation, the desired temperature of a particular device shall be able to be increased or decreased, and the temperature of each device shall be retrievable at any time.
+* Within the simulation, the current temperature of a particular device shall be able to be increased or decreased, and the temperature of each device shall be retrievable at any time.
 
 
 ### `TASK`
@@ -13,15 +13,15 @@ Define a class `Heating` that supports at least the following methods:
 
 * An constructor method `__init__`, which takes four parameters:
   * `name`: the name of the device (a string)
-  * `desired_temp`: the current temperature setting (int or float)
+  * `current_temp`: the current temperature setting (int or float)
   * `min_temp`: the minimum allowed temperature (int or float)
   * `max_temp`: the maximum allowed temperature (int or float)
   * `name`, `min_temp`, and `max_temp` can be stored as public fields
-  * `desired_temp` should be private and accessed via getters and setters
-    * The `desired_temp` must be between `min_temp` and `max_temp`.
-    * If the desired temperature would be lower than the minimum temperature, then the desired temperature should be set to the minimum temperature. Similarly, if the desired temperature would be higher than the maximum temperature, the temperature should be set to the maximum temperature.
+  * `current_temp` should be private and accessed via getters and setters
+    * The `current_temp` must be between `min_temp` and `max_temp`.
+    * If the desired temperature would be lower than the minimum temperature, then the current temperature should be set to the minimum temperature. Similarly, if the desired temperature would be higher than the maximum temperature, the temperature should be set to the maximum temperature.
 * A method `__repr__` that returns a string representation of the heating device (str). Consider the example below to determine what this string representation should look like. All numbers should be represented by one decimal digit (use rounding).
-* A method `change_temperature` that allows the current temperature setting to be changed. One parameter, 'temp_change' indicates how much the desired temperature should be changed. If temp_change is a positive number (int or float), the desired temperature will be increased by the given amount. If temp_change is negative, the desired temperature will be decreased. Of course, the desired temperature must stay within the allowed range.
+* A method `change_temperature` that allows the current temperature setting to be changed. One parameter, 'temp_change' indicates how much the current temperature should be changed. If temp_change is a positive number (int or float), the current temperature will be increased by the given amount. If temp_change is negative, the current temperature will be decreased. Of course, the desired temperature must stay within the allowed range.
 
 #### USAGE
 ```python
@@ -33,7 +33,7 @@ Heating('radiator kitchen', 20.0, 0,.0 100.0)
 >>> print(device2)
 Heating('radiator living room', 18.0, 15.0, 100.0)
 >>> device2.change_temperature(8)
->>> print(device2.get_desired_temp())
+>>> print(device2.get_current_temp())
 26.0
 >>> device3.change_temperature(-5)
 >>> print(device3)

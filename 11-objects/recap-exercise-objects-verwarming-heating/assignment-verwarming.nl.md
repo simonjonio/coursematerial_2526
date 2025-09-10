@@ -13,15 +13,15 @@ Definieer een klasse `Heating` die de volgende methoden bevat:
 
 * Een constructor `__init__`, die vier parameters neemt:
   * `name`: de naam van het apparaat (een string)
-  * `desired_temp`: de temperatuurinstelling, gewenste temperatuur (int of float)
+  * `current_temp`: de temperatuurinstelling, gewenste temperatuur (int of float)
   * `min_temp`: de minimaal toegestane temperatuur (int of float)
   * `max_temp`: de maximaal toegestane temperatuur (int of float)
   * `name`, `min_temp`, en `max_temp` kunnen worden opgeslagen als openbare velden
-  * `desired_temp` moet privaat zijn en toegankelijk via een getter en een setter
-    * De `desired_temp` moet tussen `min_temp` en `max_temp` liggen.
-    * Als de gewenste temperatuur lager zou zijn dan de minimumtemperatuur, dan moet de gewenste temperatuur worden ingesteld op de minimumtemperatuur. Evenzo, als de gewenste temperatuur hoger zou zijn dan de maximumtemperatuur, dan moet de gewenste temperatuur worden ingesteld op de maximumtemperatuur.
+  * `current_temp` moet privaat zijn en toegankelijk via een getter en een setter
+    * De `current_temp` moet tussen `min_temp` en `max_temp` liggen.
+    * Als de gewenste temperatuur lager zou zijn dan de minimumtemperatuur, dan moet de huidige temperatuur worden ingesteld op de minimumtemperatuur. Evenzo, als de gewenste temperatuur hoger zou zijn dan de maximumtemperatuur, dan moet de huidige temperatuur worden ingesteld op de maximumtemperatuur.
 * Een methode `__repr__` die een tekenreeksrepresentatie van het verwarmingsapparaat (str) retourneert. Bekijk het onderstaande voorbeeld om te bepalen hoe deze tekenreeksweergave eruit moet zien. Alle getallen moeten worden weergegeven met één decimaal cijfer (gebruik afronding).
-* Een methode `change_temperature` waarmee de huidige temperatuurinstelling kan worden gewijzigd. Een parameter, `temp_change` geeft aan hoeveel de huidige temperatuurinstelling moet worden gewijzigd. Als `temp_change` een positief getal is (int of float), wordt de gewenste temperatuur verhoogd met de opgegeven hoeveelheid. Als `temp_change` negatief is, wordt de gewenste temperatuur verlaagd. Natuurlijk moet de gewenste temperatuur binnen het toegestane bereik blijven.
+* Een methode `change_temperature` waarmee de huidige temperatuurinstelling kan worden gewijzigd. Een parameter, `temp_change` geeft aan hoeveel de huidige temperatuurinstelling moet worden gewijzigd. Als `temp_change` een positief getal is (int of float), wordt de huidige temperatuur verhoogd met de opgegeven hoeveelheid. Als `temp_change` negatief is, wordt de huidige temperatuur verlaagd. Natuurlijk moet de gewenste temperatuur binnen het toegestane bereik blijven.
 
 
 #### USAGE
