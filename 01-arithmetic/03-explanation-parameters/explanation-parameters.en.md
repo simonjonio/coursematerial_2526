@@ -64,11 +64,14 @@ As `departure` we specified `Brussels`, and `arrival` has been set to `Rome`.
 
 The values (`Brussels` and `Rome`) we pass to a function as inputs are called *arguments*.
 
-Below is an example of a very simple function:
+Below is an example of a very simple function and its corresponding function call:
 
 
 ```python
 def double(x):
     return 2 * x
+
+double(4)
 ```
 
+The last line will return `8`. 

@@ -1,6 +1,6 @@
 # Debugging
 
-Whenever you run a software program or a script for the first time, it will (almost) never run the way you want it to run. In the beginning this might seem frustrating, but along the way you will come to understand that this is the way of software engineering. You will write code, it will not work, and you will have to adapt your code. This is called **debugging**. 
+We have seen some introductory applications of writing code. As you can imagine, your code will only become more complex as we move onto new material. More and more you will encounter scripts that will not run the way you want them to run when you execute them for the first time. In the beginning this might seem frustrating, but along the way you will come to understand that this is the way of software engineering. You will write code, it will not work, and you will have to adapt your code. This is called **debugging**. 
 
 Debugging is so important, that on your exam you will be asked to debug written code. You will be guided throughout the course on how to debug your code for specific assignments, but an introductory overview is provided in this text. 
 
@@ -38,6 +38,30 @@ The error messages above consist of three parts:
 * The line where the error occurs, sometimes with a symbol showing where the error happens. 
 * The error message itself. In this case we are dealing with a ZeroDevisionError, a NameError, and a TypeError. Throughout the course you will learn why these result in errors (although you should at least understand what is happening in the first one).
 
+### Syntax errors
+One type of error you will most likely encounter often, is a SyntaxError. These errors mean that Python just does not understand what you have written and it cannot execute it. Some common examples include missing colons, wrong indentation, missing commas, assigning two incompatible types (such as a string and an int), misspelling keywords, and many such issues. 
+
+Here are some code examples:
+
+```python
+# Missing colons
+def greet()
+  print("Hello, world!")
+
+# Incorrect indentation
+def greet():
+print("Hello, world!")
+
+# Incorrect assignment
+'string' = 1
+
+# Misspelling
+def greet():
+  prnit("Hello, world!")
+```
+
+Lucky for you, your editor (in our case VS Code) will highlight most syntax errors while you are writing the code, so you should be able to correct them before you ever reach the execution stage. 
+
 ### Longer stack traces
 It is important to understand that the first two parts of the stack trace are technically one piece. Often you will see that multiple files or at least multiple lines are affected in an error, thus you will see multiple lines and files referenced, like so:
 
@@ -54,6 +78,43 @@ ZeroDivisionError: division by zero
 
 This does not mean you are dealing with 3 different errors. There is only one error, the ZeroDivisionError, but due to the nature of how the function was called, three different lines are shown in the error. As we said, only the last line will feature the error itself, in this case dividing ```a``` by ```0```.
 
+### Multiple errors
+
+Let's say you write a function with multiple errors, like so:
+
+```python
+def greet(): 
+    'a' = 1
+    prnt("Hello, world!")
+    
+greet()
+```
+
+What happens when we run this code? Will we see all errors at once or will the program stop at the first instance? When we run the code, we get this error:
+
+```python
+Traceback (most recent call last):
+  File "example.py", line 2
+    'a' = 1
+    ^^^
+SyntaxError: cannot assign to literal here
+```
+
+As you can see, Python stops at the first occurrence of an error and halts the program there. When we delete line 2 (or fix it), we get the next error:
+
+```python
+Traceback (most recent call last):
+  File "example.py", line 5, in <module>
+    greet()
+    ~~~~~^^
+  File "example.py", line 3, in greet
+    prnt("Hello, world!")
+    ^^^^
+NameError: name 'prnt' is not defined. Did you mean: 'print'?
+```
+
+This is an example of a longer stack trace leading back to a typo. 
+
 ### "I don't understand the error"
 
 Even though Python's syntax is more readable than that of many other programming languages, you might often find yourself confused by the stack trace. In cases like this, you can just Google the error message and you will get an answer pretty easily. Copilot or Chat-GPT can be very useful here as well. 
@@ -67,9 +128,9 @@ Often you will write a script that doesn't give you any errors, but it doesn't a
 In cases like these, a print statement in your code helps you understand where you are wrong. Printing values to your console should never break your code, so you can use these statements anywhere and anytime you like, if you are having trouble finding out where you are wrong. 
 
 ```python
-#some code is happening here
+# some code is happening here
 print("This is a temporary result.")
-#more code is happening here
+# more code is happening here
 ```
 
 Throughout the course we will give examples on how to debug specific cases and broader applications. In chapter 05 (strings) we will give examples on how to use these print statements even more efficiently. 
