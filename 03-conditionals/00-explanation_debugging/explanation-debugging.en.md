@@ -140,5 +140,5 @@ Throughout the course we will give examples on how to debug specific cases and b
 We strongly suggest you try to run your own code first before you move on to the pytests. We encourage this because of a few different reasons:
 
 * The pytests take a long time, much longer than just running your own code. 
-* If you run your code with a single example, you will get a clear error and/or a to-the-point printed statement. When you run the pytest, your code will run many times over and it will be hard to decipher which error is due to what behaviour. 
+* If you run your code with a single example, you will get a clear error and/or a to-the-point printed statement. When you run the pytest, your code will run many times over and it will be hard to decipher which error is due to what behaviour (except if you run `pytest -x` in which case you will stop at the first instance of an error). 
 * You will be asked to decipher error statements on the exam and the PE. There won't be any pytests there to help you.  
