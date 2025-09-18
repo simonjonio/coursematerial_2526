@@ -76,7 +76,7 @@ Traceback (most recent call last):
 ZeroDivisionError: division by zero
 ```
 
-This does not mean you are dealing with 3 different errors. There is only one error, the ZeroDivisionError, but due to the nature of how the function was called, three different lines are shown in the error. As we said, only the last line will feature the error itself, in this case dividing ```a``` by ```0```.
+This does not mean you are dealing with 3 different errors. There is only one error, the ZeroDivisionError, but due to the nature of how the function was called, three different lines are shown in the error. If you use the default settings, only the last line will feature the error itself, in this case dividing ```a``` by ```0```.
 
 ### Multiple errors
 
