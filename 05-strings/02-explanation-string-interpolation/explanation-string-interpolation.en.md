@@ -67,3 +67,18 @@ You can left align, right align and center:
 >>> f"{text:<10}|{text:>10}|{text:^10}|"
 'abc       |       abc|   abc    |'
 ```
+
+## Debugging using string interpolation. 
+
+So far, when debugging we have only been able to print out certain values or predefined strings. Using interpolation, you can print out intermediary results in your code. 
+
+```python
+a = 2
+b = 3
+print(f"a = {a} and b = {b}") #a = 2 and b = 3
+#some code that changes a and b
+print(f"a = {a} and b = {b}")
+
+```
+
+This way, you can check what happens with your variables during the execution of your code. 

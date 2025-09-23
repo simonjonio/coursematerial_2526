@@ -64,3 +64,15 @@ Likewise for falsey values, which will be considered `False`.
 This raises the question, is `5` a truthy value, or a falsey one?
 In the case of integers, all of them are truthy, except for `0`, which is falsey.
 So in the example above, `instruction` will be executed.
+
+## Debugging conditional statements
+
+An easy way to debug your code if you are using conditionals, is by just printing out a line in your conditional block. 
+
+``` python
+if (condition):
+    print("The condition is true.")
+    #rest of your code
+```
+
+This is an easy way to find out if a specific example goes through this block or not. When your code gets more complex, you will often have to check whether some conditional blocks are triggered or not. This is an easy way to do it. 

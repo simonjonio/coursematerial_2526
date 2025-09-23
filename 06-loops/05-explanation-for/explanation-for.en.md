@@ -51,3 +51,16 @@ Note that `range(start, stop)` does not include `stop` itself.
 * `range(start, stop, step)` goes from `start` to `stop` with increments of `step`.
 * `range(stop)` is the same as `range(0, stop)`.
 * Negative `step` allows you to count backwards.
+
+## Debugging loops
+
+Sometimes your loops will not run the way you want them to run. They will end too soon or each iteration will do something you didn't intend it to do. In these cases, print statements can generally work pretty well to find out where your code goes wrong. 
+
+```python
+for index in range(0,x):
+    result = 0
+    #some code here that changes the result
+    print(f"During iteration {index} the result is {result}.")
+```
+
+This way, you will see what every intermediate result is. Whenever it deviates from what it should be, you can check what's happening there. You will also see when your loop ends, which can be handy because often your loop will run for too long or too short, especially while-loops.
